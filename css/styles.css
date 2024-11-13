@@ -1,0 +1,137 @@
+/* Mengatur gaya dasar untuk container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Gaya header yang lebih cantik */
+header {
+    background: linear-gradient(135deg, #52e657, #38a1db); /* Warna gradien */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    border-bottom: 2px solid #38a1db; /* Garis bawah halus */
+}
+
+header h1 {
+    font-size: 32px; /* Ukuran font lebih besar */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1.5px; /* Spasi antar huruf */
+}
+
+/* Mengatur navbar dan ikon dengan hover efek */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0; /* Memberi jarak atas pada navbar */
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Ukuran ikon */
+    transition: color 0.3s, transform 0.3s; /* Efek transisi */
+}
+
+.navbar li a:hover {
+    color: #ffdd57; /* Warna ikon saat di-hover */
+    transform: scale(1.2); /* Membesarkan ikon saat di-hover */
+}
+
+/* Menambahkan efek latar belakang pada hover */
+.navbar li a:hover::after {
+    content: '';
+    display: block;
+    margin: 5px auto 0;
+    width: 50%;
+    height: 2px;
+    background-color: #ffdd57; /* Garis kecil di bawah saat hover */
+}
+
+/* Style untuk section */
+.section {
+    padding: 40px 0;
+}
+
+/* Mengatur tampilan carousel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mengatur gaya gambar di carousel agar responsif */
+.carousel-item img {
+    width: 100%; /* Membuat gambar mengisi lebar kontainer */
+    height: 400px; /* Atur tinggi gambar sesuai kebutuhan Anda */
+    object-fit: cover; /* Mengisi area kontainer dengan proporsi yang baik */
+    display: block;
+}
+
+/* Tombol navigasi carousel */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Gaya footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navbar li {
+        margin-right: 0;
+    }
+
+    /* Atur gambar carousel agar lebih fleksibel di layar kecil */
+    .carousel-item img {
+        height: auto; /* Menyesuaikan tinggi gambar dengan proporsi yang benar di layar kecil */
+    }
+}
